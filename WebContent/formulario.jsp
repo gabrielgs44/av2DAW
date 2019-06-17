@@ -19,7 +19,8 @@
 			<p><label for="sexo">Sexo:</label><input type="radio" name="sexo" id="sexo" value="M"> Masculino 
 			<input type="radio" name="sexo" id="sexo" value="F"> Feminino</p>
 			
-			<p><label for="pais">País:</label><select name="pais" id="pais"size=1>
+			<p><label for="pais">País:</label>
+			<select name="pais" id="pais"size=1>
 			<option>Brasil </option>
 			<option>Japão </option>
 			<option>Bolivia </option>

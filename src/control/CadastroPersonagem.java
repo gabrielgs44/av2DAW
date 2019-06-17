@@ -25,25 +25,24 @@ public class CadastroPersonagem extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 	    String nome = request.getParameter("nome");
-        String sexoString = request.getParameter("sexo");
-        String pais = request.getParameter("pais");
-        char sexo = sexoString.charAt(0);
-
-        Personagem perso = new Personagem(nome, pais, sexo);
-
-        int chuteFraco = Integer.parseInt(request.getParameter("chuteFraco"));
-        int chuteForte = Integer.parseInt(request.getParameter("chuteForte"));
-        int socoFraco = Integer.parseInt(request.getParameter("socoFraco"));
-        int socoForte = Integer.parseInt(request.getParameter("socoForte"));
-
-        Golpe golpe = new Golpe(socoFraco, socoForte, chuteFraco, chuteForte);
-
-        String magia = request.getParameter("magia");
+	    char sexo = request.getParameter("sexo").charAt(0);
+	    String pais = request.getParameter("pais");
+        
+	    Personagem perso = new Personagem(nome, pais, sexo);
+	    
+	    int chuteForte = Integer.parseInt(request.getParameter("chuteForte"));
+	    int chuteFraco = Integer.parseInt(request.getParameter("chuteFraco"));
+	    int socoForte = Integer.parseInt(request.getParameter("socoForte"));
+	    int socoFraco = Integer.parseInt(request.getParameter("socoFraco"));
+	    
+	    Golpe golpe = new Golpe(chuteForte, chuteFraco, socoForte, socoFraco);
+	    
+	    String nomeMagia = request.getParameter("magia");
         String descricao = request.getParameter("descricao");
         int potencia = Integer.parseInt(request.getParameter("potencia"));
-
-        Magia mag = new Magia(magia, descricao, potencia);
         
+        Magia mag = new Magia(nomeMagia, descricao, potencia);
+	    
         RequestDispatcher desp = request.getRequestDispatcher("confirmacao.jsp");
         desp.forward(request, response);
 	    
