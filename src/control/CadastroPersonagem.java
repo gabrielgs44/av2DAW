@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.DaoPersonagem;
 import model.Golpe;
 import model.Magia;
 import model.Personagem;
@@ -43,6 +44,9 @@ public class CadastroPersonagem extends HttpServlet {
         
         Magia mag = new Magia(nomeMagia, descricao, potencia);
 	    
+        DaoPersonagem daoPerso = new DaoPersonagem();
+        daoPerso.cadastrar(perso, mag, golpe);
+        
         RequestDispatcher desp = request.getRequestDispatcher("confirmacao.jsp");
         desp.forward(request, response);
 	    

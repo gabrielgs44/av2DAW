@@ -21,11 +21,11 @@
 			
 			<p><label for="pais">País:</label>
 			<select name="pais" id="pais"size=1>
-			<option>Brasil </option>
-			<option>Japão </option>
-			<option>Bolivia </option>
-			 <option>Argentina </option>
-			 <option>EUA </option>
+			<option value="brasil">Brasil </option>
+			<option value="Japao">Japão </option>
+			<option value="Bolivia">Bolivia </option>
+			<option value="Argentina">Argentina </option>
+			<option value="EUA">EUA </option>
 			</select>
 		</fieldset>
 

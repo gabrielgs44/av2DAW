@@ -9,9 +9,9 @@ public class DaoPersonagem {
     private Connection conexao;
     
     public DaoPersonagem() {
-        String url = "jbdc:mysql://localhost/jogoLuta";
+        String url = "jdbc:mysql://localhost/jogoLuta";
         String usuario = "root";
-        String senha = "axyuwvqi0";
+        String senha = "";
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -21,7 +21,6 @@ public class DaoPersonagem {
         }
         catch(ClassNotFoundException e) {
             System.out.println("Classe não encontrada");
-            //e.printStackTrace();
         }
         catch(SQLException e) {
             System.out.println("Erro de conexão ao BD");
@@ -41,9 +40,9 @@ public class DaoPersonagem {
             comando.setString(5, String.valueOf(perso.getSexo()));
             comando.setString(6, perso.getPais());
             comando.setInt(7, golpe.getChuteForte());
-            comando.setInt(7, golpe.getChuteFraco());
-            comando.setInt(7, golpe.getSocoForte());
-            comando.setInt(7, golpe.getSocoFraco());
+            comando.setInt(8, golpe.getChuteFraco());
+            comando.setInt(9, golpe.getSocoForte());
+            comando.setInt(10, golpe.getSocoFraco());
             
             comando.executeUpdate();
             
