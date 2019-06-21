@@ -51,7 +51,7 @@
 				<p><label for="magia">Nome da Magia:</label>
 				<input type="text" id='magia' name="magia"></p>
 
-				<p><label for="descricao">Descrição:</label><textarea name="descricao" id="descricao" rows="10" cols="40"></textarea>
+				<p><label for="descricao">Descrição:</label><br /><textarea name="descricao" id="descricao" rows="10" cols="40"></textarea></p>
 
 				<p><label for="potencia">Potência:</label><select name="potencia" id="potencia" size=1>
 				<option>500 </option>

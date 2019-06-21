@@ -47,3 +47,4 @@
 		Potência: <%=potencia %>
 		</p></Fieldset>
 	</body>
+</html>
